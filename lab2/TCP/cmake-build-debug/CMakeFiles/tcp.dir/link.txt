@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/tcp.dir/src/TCPReceiver.cpp.o CMakeFiles/tcp.dir/src/TCPSender.cpp.o CMakeFiles/tcp.dir/src/main.cpp.o  -o ../test/tcp ../lib/libnetsim.a 

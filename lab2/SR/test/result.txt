@@ -1,0 +1,479 @@
+******模拟网络环境******：模拟网络环境初始化...
+******模拟网络环境******：模拟网络环境启动...
+发送方发送报文: seqnum = 0, acknum = -1, checksum = 12851, aaaaaaaaaaaaaaaaaaaa
+收到的packet: seqnum = 0, acknum = -1, checksum = 12851, aaaaaaaaaaaaaaaaaaaa
+receive called q size =0: 
+接收方有序收到发送方的报文: seqnum = 0, acknum = -1, checksum = 12851, aaaaaaaaaaaaaaaaaaaa
+******模拟网络环境******：向上递交给应用层数据：aaaaaaaaaaaaaaaaaaaa
+接收方发送确认报文: seqnum = -1, acknum = 0, checksum = 12851, ....................
+收到的ack: seqnum = -1, acknum = 0, checksum = 12851, ....................
+sender::receive q: 0 
+ready: 
+0 erased 
+发送方正确收到确认: seqnum = -1, acknum = 0, checksum = 12851, ....................
+发送方发送报文: seqnum = 1, acknum = -1, checksum = 10280, bbbbbbbbbbbbbbbbbbbb
+发送方发送报文: seqnum = 2, acknum = -1, checksum = 7709, cccccccccccccccccccc
+发送方发送报文: seqnum = 3, acknum = -1, checksum = 5138, dddddddddddddddddddd
+发送方发送报文: seqnum = 4, acknum = -1, checksum = 2567, eeeeeeeeeeeeeeeeeeee
+收到的packet: seqnum = 1, acknum = -1, checksum = 10280, bbbbbbbbbbbbbbbbbbbb
+receive called q size =0: 
+接收方有序收到发送方的报文: seqnum = 1, acknum = -1, checksum = 10280, bbbbbbbbbbbbbbbbbbbb
+******模拟网络环境******：向上递交给应用层数据：bbbbbbbbbbbbbbbbbbbb
+接收方发送确认报文: seqnum = -1, acknum = 1, checksum = 12850, ....................
+收到的packet: seqnum = 2, acknum = -1, checksum = 7709, cccccccccccccccccccc
+receive called q size =0: 
+接收方有序收到发送方的报文: seqnum = 2, acknum = -1, checksum = 7709, cccccccccccccccccccc
+******模拟网络环境******：向上递交给应用层数据：cccccccccccccccccccc
+接收方发送确认报文: seqnum = -1, acknum = 2, checksum = 12849, ....................
+收到的packet: seqnum = 3, acknum = -1, checksum = 5138, dddddddddddddddddddd
+receive called q size =0: 
+接收方有序收到发送方的报文: seqnum = 3, acknum = -1, checksum = 5138, dddddddddddddddddddd
+******模拟网络环境******：向上递交给应用层数据：dddddddddddddddddddd
+接收方发送确认报文: seqnum = -1, acknum = 3, checksum = 12848, ....................
+发送方定时器时间到，重发某一报文: seqnum = 1, acknum = -1, checksum = 10280, bbbbbbbbbbbbbbbbbbbb
+收到的packet: seqnum = 4, acknum = -1, checksum = 2567, eeeeeeeeeeeeeeeeeeee
+receive called q size =0: 
+接收方有序收到发送方的报文: seqnum = 4, acknum = -1, checksum = 2567, eeeeeeeeeeeeeeeeeeee
+******模拟网络环境******：向上递交给应用层数据：eeeeeeeeeeeeeeeeeeee
+接收方发送确认报文: seqnum = -1, acknum = 4, checksum = 12847, ....................
+发送方定时器时间到，重发某一报文: seqnum = 2, acknum = -1, checksum = 7709, cccccccccccccccccccc
+发送方定时器时间到，重发某一报文: seqnum = 3, acknum = -1, checksum = 5138, dddddddddddddddddddd
+发送方定时器时间到，重发某一报文: seqnum = 4, acknum = -1, checksum = 2567, eeeeeeeeeeeeeeeeeeee
+收到的ack: seqnum = -1, acknum = 2, checksum = 12849, ....................
+sender::receive q: 1 2 3 4 
+ready: 
+发送方正确收到确认: seqnum = -1, acknum = 2, checksum = 12849, ....................
+收到的packet: seqnum = 2, acknum = -1, checksum = 7709, cccccccccccccccccccc
+receive called q size =0: 
+接收方收到在范围[base-N,base-1]内的报文: seqnum = -1, acknum = 4, checksum = 12847, ....................
+接收方发送确认报文: seqnum = -1, acknum = 2, checksum = 12849, ....................
+收到的ack: seqnum = -1, acknum = 3, checksum = 12848, ....................
+sender::receive q: 1 3 4 
+ready: 2 
+发送方正确收到确认: seqnum = -1, acknum = 3, checksum = 12848, ....................
+收到的packet: seqnum = 3, acknum = -1, checksum = 5138, dddddddddddddddddddd
+receive called q size =0: 
+接收方收到在范围[base-N,base-1]内的报文: seqnum = -1, acknum = 2, checksum = 12849, ....................
+接收方发送确认报文: seqnum = -1, acknum = 3, checksum = 12848, ....................
+收到的ack: seqnum = -1, acknum = 4, checksum = 12847, ....................
+sender::receive q: 1 4 
+ready: 2 3 
+发送方正确收到确认: seqnum = -1, acknum = 4, checksum = 12847, ....................
+发送方定时器时间到，重发某一报文: seqnum = 1, acknum = -1, checksum = 10280, bbbbbbbbbbbbbbbbbbbb
+收到的ack: seqnum = -1, acknum = 2, checksum = 12849, ....................
+sender::receive q: 1 
+ready: 2 3 4 
+发送方收到的ack不在队列q中: seqnum = -1, acknum = 2, checksum = 12849, ....................
+收到的packet: seqnum = 4, acknum = -1, checksum = 2567, eeeeeeeeeeeeeeeeeeee
+receive called q size =0: 
+接收方收到在范围[base-N,base-1]内的报文: seqnum = -1, acknum = 3, checksum = 12848, ....................
+接收方发送确认报文: seqnum = -1, acknum = 4, checksum = 12847, ....................
+收到的packet: seqnum = 1, acknum = -1, checksum = 10280, bbbbbbbbbbbbbbbbbbbb
+receive called q size =0: 
+接收方收到在范围[base-N,base-1]内的报文: seqnum = -1, acknum = 4, checksum = 12847, ....................
+接收方发送确认报文: seqnum = -1, acknum = 1, checksum = 12850, ....................
+收到的ack: seqnum = -1, acknum = 3, checksum = 12848, ....................
+sender::receive q: 1 
+ready: 2 3 4 
+发送方收到的ack不在队列q中: seqnum = -1, acknum = 3, checksum = 12848, ....................
+收到的ack: seqnum = -1, acknum = 4, checksum = 12847, ....................
+sender::receive q: 1 
+ready: 2 3 4 
+发送方收到的ack不在队列q中: seqnum = -1, acknum = 4, checksum = 12847, ....................
+发送方定时器时间到，重发某一报文: seqnum = 1, acknum = -1, checksum = 10280, bbbbbbbbbbbbbbbbbbbb
+收到的packet: seqnum = 1, acknum = -1, checksum = 10280, cbbbbbbbbbbbbbbbbbbb
+receive called q size =0: 
+接收方没有正确收到发送方的报文,数据校验错误: seqnum = 1, acknum = -1, checksum = 10280, cbbbbbbbbbbbbbbbbbbb
+发送方定时器时间到，重发某一报文: seqnum = 1, acknum = -1, checksum = 10280, bbbbbbbbbbbbbbbbbbbb
+收到的packet: seqnum = 1, acknum = -1, checksum = 10280, bbbbbbbbbbbbbbbbbbbb
+receive called q size =0: 
+接收方收到在范围[base-N,base-1]内的报文: seqnum = -1, acknum = 1, checksum = 12850, ....................
+接收方发送确认报文: seqnum = -1, acknum = 1, checksum = 12850, ....................
+发送方定时器时间到，重发某一报文: seqnum = 1, acknum = -1, checksum = 10280, bbbbbbbbbbbbbbbbbbbb
+收到的packet: seqnum = 1, acknum = -1, checksum = 10280, cbbbbbbbbbbbbbbbbbbb
+receive called q size =0: 
+接收方没有正确收到发送方的报文,数据校验错误: seqnum = 1, acknum = -1, checksum = 10280, cbbbbbbbbbbbbbbbbbbb
+发送方定时器时间到，重发某一报文: seqnum = 1, acknum = -1, checksum = 10280, bbbbbbbbbbbbbbbbbbbb
+收到的packet: seqnum = 1, acknum = -1, checksum = 10280, bbbbbbbbbbbbbbbbbbbb
+receive called q size =0: 
+接收方收到在范围[base-N,base-1]内的报文: seqnum = -1, acknum = 1, checksum = 12850, ....................
+接收方发送确认报文: seqnum = -1, acknum = 1, checksum = 12850, ....................
+收到的ack: seqnum = -1, acknum = 1, checksum = 12850, ....................
+sender::receive q: 1 
+ready: 2 3 4 
+1 erased 2 erased 3 erased 4 erased 
+发送方正确收到确认: seqnum = -1, acknum = 1, checksum = 12850, ....................
+发送方发送报文: seqnum = 5, acknum = -1, checksum = 65531, ffffffffffffffffffff
+发送方发送报文: seqnum = 6, acknum = -1, checksum = 62960, gggggggggggggggggggg
+发送方发送报文: seqnum = 7, acknum = -1, checksum = 60389, hhhhhhhhhhhhhhhhhhhh
+发送方发送报文: seqnum = 8, acknum = -1, checksum = 57818, iiiiiiiiiiiiiiiiiiii
+收到的packet: seqnum = 6, acknum = -1, checksum = 62960, gggggggggggggggggggg
+receive called q size =0: 
+接收方无序收到发送方的报文: seqnum = 6, acknum = -1, checksum = 62960, gggggggggggggggggggg
+接收方发送确认报文: seqnum = -1, acknum = 6, checksum = 12845, ....................
+收到的packet: seqnum = 7, acknum = -1, checksum = 60389, hhhhhhhhhhhhhhhhhhhh
+receive called q size =1: 6
+接收方无序收到发送方的报文: seqnum = 7, acknum = -1, checksum = 60389, hhhhhhhhhhhhhhhhhhhh
+接收方发送确认报文: seqnum = -1, acknum = 7, checksum = 12844, ....................
+收到的ack: seqnum = -1, acknum = 6, checksum = 12845, ....................
+sender::receive q: 5 6 7 8 
+ready: 
+发送方正确收到确认: seqnum = -1, acknum = 6, checksum = 12845, ....................
+收到的packet: seqnum = 8, acknum = -1, checksum = 57818, iiiiiiiiiiiiiiiiiiii
+receive called q size =2: 67
+接收方无序收到发送方的报文: seqnum = 8, acknum = -1, checksum = 57818, iiiiiiiiiiiiiiiiiiii
+接收方发送确认报文: seqnum = -1, acknum = 8, checksum = 12843, ....................
+收到的ack: seqnum = -1, acknum = 7, checksum = 12844, ....................
+sender::receive q: 5 7 8 
+ready: 6 
+发送方正确收到确认: seqnum = -1, acknum = 7, checksum = 12844, ....................
+发送方定时器时间到，重发某一报文: seqnum = 5, acknum = -1, checksum = 65531, ffffffffffffffffffff
+发送方定时器时间到，重发某一报文: seqnum = 8, acknum = -1, checksum = 57818, iiiiiiiiiiiiiiiiiiii
+收到的packet: seqnum = 5, acknum = -1, checksum = 65531, gfffffffffffffffffff
+receive called q size =3: 678
+接收方没有正确收到发送方的报文,数据校验错误: seqnum = 5, acknum = -1, checksum = 65531, gfffffffffffffffffff
+收到的ack: seqnum = -1, acknum = 8, checksum = 12843, ....................
+sender::receive q: 5 8 
+ready: 6 7 
+发送方正确收到确认: seqnum = -1, acknum = 8, checksum = 12843, ....................
+收到的packet: seqnum = 8, acknum = -1, checksum = 57818, iiiiiiiiiiiiiiiiiiii
+receive called q size =3: 678
+接收方无序收到已缓存的发送方报文: seqnum = 8, acknum = -1, checksum = 57818, iiiiiiiiiiiiiiiiiiii
+接收方发送确认报文: seqnum = -1, acknum = 8, checksum = 12843, ....................
+发送方定时器时间到，重发某一报文: seqnum = 5, acknum = -1, checksum = 65531, ffffffffffffffffffff
+收到的ack: seqnum = -1, acknum = 8, checksum = 12843, ....................
+sender::receive q: 5 
+ready: 6 7 8 
+发送方收到的ack不在队列q中: seqnum = -1, acknum = 8, checksum = 12843, ....................
+收到的packet: seqnum = 5, acknum = -1, checksum = 65531, ffffffffffffffffffff
+receive called q size =3: 678
+接收方有序收到发送方的报文: seqnum = 5, acknum = -1, checksum = 65531, ffffffffffffffffffff
+******模拟网络环境******：向上递交给应用层数据：ffffffffffffffffffff
+******模拟网络环境******：向上递交给应用层数据：gggggggggggggggggggg
+******模拟网络环境******：向上递交给应用层数据：hhhhhhhhhhhhhhhhhhhh
+******模拟网络环境******：向上递交给应用层数据：iiiiiiiiiiiiiiiiiiii
+接收方发送确认报文: seqnum = -1, acknum = 5, checksum = 12846, ....................
+收到的ack: seqnum = -1, acknum = 5, checksum = 12846, ....................
+sender::receive q: 5 
+ready: 6 7 8 
+5 erased 6 erased 7 erased 8 erased 
+发送方正确收到确认: seqnum = -1, acknum = 5, checksum = 12846, ....................
+发送方发送报文: seqnum = 9, acknum = -1, checksum = 55247, jjjjjjjjjjjjjjjjjjjj
+发送方发送报文: seqnum = 10, acknum = -1, checksum = 52676, kkkkkkkkkkkkkkkkkkkk
+发送方发送报文: seqnum = 11, acknum = -1, checksum = 50105, llllllllllllllllllll
+发送方发送报文: seqnum = 12, acknum = -1, checksum = 47534, mmmmmmmmmmmmmmmmmmmm
+收到的packet: seqnum = 9, acknum = -1, checksum = 55247, jjjjjjjjjjjjjjjjjjjj
+receive called q size =0: 
+接收方有序收到发送方的报文: seqnum = 9, acknum = -1, checksum = 55247, jjjjjjjjjjjjjjjjjjjj
+******模拟网络环境******：向上递交给应用层数据：jjjjjjjjjjjjjjjjjjjj
+接收方发送确认报文: seqnum = -1, acknum = 9, checksum = 12842, ....................
+收到的packet: seqnum = 10, acknum = -1, checksum = 52676, kkkkkkkkkkkkkkkkkkkk
+receive called q size =0: 
+接收方有序收到发送方的报文: seqnum = 10, acknum = -1, checksum = 52676, kkkkkkkkkkkkkkkkkkkk
+******模拟网络环境******：向上递交给应用层数据：kkkkkkkkkkkkkkkkkkkk
+接收方发送确认报文: seqnum = -1, acknum = 10, checksum = 12841, ....................
+收到的ack: seqnum = -1, acknum = 10, checksum = 12841, ....................
+sender::receive q: 9 10 11 12 
+ready: 
+发送方正确收到确认: seqnum = -1, acknum = 10, checksum = 12841, ....................
+发送方定时器时间到，重发某一报文: seqnum = 9, acknum = -1, checksum = 55247, jjjjjjjjjjjjjjjjjjjj
+发送方定时器时间到，重发某一报文: seqnum = 11, acknum = -1, checksum = 50105, llllllllllllllllllll
+发送方定时器时间到，重发某一报文: seqnum = 12, acknum = -1, checksum = 47534, mmmmmmmmmmmmmmmmmmmm
+收到的packet: seqnum = -999999, acknum = -1, checksum = 50105, llllllllllllllllllll
+receive called q size =0: 
+接收方没有正确收到发送方的报文,数据校验错误: seqnum = -999999, acknum = -1, checksum = 50105, llllllllllllllllllll
+收到的packet: seqnum = 12, acknum = -1, checksum = 47534, mmmmmmmmmmmmmmmmmmmm
+receive called q size =0: 
+接收方无序收到发送方的报文: seqnum = 12, acknum = -1, checksum = 47534, mmmmmmmmmmmmmmmmmmmm
+接收方发送确认报文: seqnum = -1, acknum = 12, checksum = 12839, ....................
+收到的ack: seqnum = -1, acknum = 12, checksum = 12839, ....................
+sender::receive q: 9 11 12 
+ready: 10 
+发送方正确收到确认: seqnum = -1, acknum = 12, checksum = 12839, ....................
+收到的packet: seqnum = -999999, acknum = -1, checksum = 55247, jjjjjjjjjjjjjjjjjjjj
+receive called q size =1: 12
+接收方没有正确收到发送方的报文,数据校验错误: seqnum = -999999, acknum = -1, checksum = 55247, jjjjjjjjjjjjjjjjjjjj
+收到的packet: seqnum = 11, acknum = -1, checksum = 50105, llllllllllllllllllll
+receive called q size =1: 12
+接收方有序收到发送方的报文: seqnum = 11, acknum = -1, checksum = 50105, llllllllllllllllllll
+******模拟网络环境******：向上递交给应用层数据：llllllllllllllllllll
+******模拟网络环境******：向上递交给应用层数据：mmmmmmmmmmmmmmmmmmmm
+接收方发送确认报文: seqnum = -1, acknum = 11, checksum = 12840, ....................
+发送方定时器时间到，重发某一报文: seqnum = 9, acknum = -1, checksum = 55247, jjjjjjjjjjjjjjjjjjjj
+发送方定时器时间到，重发某一报文: seqnum = 11, acknum = -1, checksum = 50105, llllllllllllllllllll
+收到的packet: seqnum = 12, acknum = -1, checksum = 47534, mmmmmmmmmmmmmmmmmmmm
+receive called q size =0: 
+接收方收到在范围[base-N,base-1]内的报文: seqnum = -1, acknum = 11, checksum = 12840, ....................
+接收方发送确认报文: seqnum = -1, acknum = 12, checksum = 12839, ....................
+收到的ack: seqnum = -1, acknum = 11, checksum = 12840, ....................
+sender::receive q: 9 11 
+ready: 10 12 
+发送方正确收到确认: seqnum = -1, acknum = 11, checksum = 12840, ....................
+收到的packet: seqnum = -999999, acknum = -1, checksum = 55247, jjjjjjjjjjjjjjjjjjjj
+receive called q size =0: 
+接收方没有正确收到发送方的报文,数据校验错误: seqnum = -999999, acknum = -1, checksum = 55247, jjjjjjjjjjjjjjjjjjjj
+收到的packet: seqnum = 11, acknum = -1, checksum = 50105, llllllllllllllllllll
+receive called q size =0: 
+接收方收到在范围[base-N,base-1]内的报文: seqnum = -1, acknum = 12, checksum = 12839, ....................
+接收方发送确认报文: seqnum = -1, acknum = 11, checksum = 12840, ....................
+收到的ack: seqnum = -1, acknum = 12, checksum = 12839, /...................
+sender::receive q: 9 
+ready: 10 11 12 
+发送方没有正确收到确认: seqnum = -1, acknum = 12, checksum = 12839, /...................
+收到的ack: seqnum = -1, acknum = 11, checksum = 12840, ....................
+sender::receive q: 9 
+ready: 10 11 12 
+发送方收到的ack不在队列q中: seqnum = -1, acknum = 11, checksum = 12840, ....................
+发送方定时器时间到，重发某一报文: seqnum = 9, acknum = -1, checksum = 55247, jjjjjjjjjjjjjjjjjjjj
+收到的packet: seqnum = 9, acknum = -1, checksum = 55247, jjjjjjjjjjjjjjjjjjjj
+receive called q size =0: 
+接收方收到在范围[base-N,base-1]内的报文: seqnum = -1, acknum = 11, checksum = 12840, ....................
+接收方发送确认报文: seqnum = -1, acknum = 9, checksum = 12842, ....................
+收到的ack: seqnum = -1, acknum = 9, checksum = 12842, ....................
+sender::receive q: 9 
+ready: 10 11 12 
+9 erased 10 erased 11 erased 12 erased 
+发送方正确收到确认: seqnum = -1, acknum = 9, checksum = 12842, ....................
+发送方发送报文: seqnum = 13, acknum = -1, checksum = 44963, nnnnnnnnnnnnnnnnnnnn
+发送方发送报文: seqnum = 14, acknum = -1, checksum = 42392, oooooooooooooooooooo
+发送方发送报文: seqnum = 15, acknum = -1, checksum = 39821, pppppppppppppppppppp
+发送方发送报文: seqnum = 0, acknum = -1, checksum = 37266, qqqqqqqqqqqqqqqqqqqq
+收到的packet: seqnum = 13, acknum = -1, checksum = 44963, onnnnnnnnnnnnnnnnnnn
+receive called q size =0: 
+接收方没有正确收到发送方的报文,数据校验错误: seqnum = 13, acknum = -1, checksum = 44963, onnnnnnnnnnnnnnnnnnn
+收到的packet: seqnum = 14, acknum = -1, checksum = 42392, oooooooooooooooooooo
+receive called q size =0: 
+接收方无序收到发送方的报文: seqnum = 14, acknum = -1, checksum = 42392, oooooooooooooooooooo
+接收方发送确认报文: seqnum = -1, acknum = 14, checksum = 12837, ....................
+收到的ack: seqnum = -1, acknum = 14, checksum = 12837, ....................
+sender::receive q: 13 14 15 0 
+ready: 
+发送方正确收到确认: seqnum = -1, acknum = 14, checksum = 12837, ....................
+收到的packet: seqnum = 15, acknum = -1, checksum = 39821, qppppppppppppppppppp
+receive called q size =1: 14
+接收方没有正确收到发送方的报文,数据校验错误: seqnum = 15, acknum = -1, checksum = 39821, qppppppppppppppppppp
+发送方定时器时间到，重发某一报文: seqnum = 13, acknum = -1, checksum = 44963, nnnnnnnnnnnnnnnnnnnn
+发送方定时器时间到，重发某一报文: seqnum = 15, acknum = -1, checksum = 39821, pppppppppppppppppppp
+发送方定时器时间到，重发某一报文: seqnum = 0, acknum = -1, checksum = 37266, qqqqqqqqqqqqqqqqqqqq
+收到的packet: seqnum = 0, acknum = -1, checksum = 37266, qqqqqqqqqqqqqqqqqqqq
+receive called q size =1: 14
+接收方无序收到发送方的报文: seqnum = 0, acknum = -1, checksum = 37266, qqqqqqqqqqqqqqqqqqqq
+接收方发送确认报文: seqnum = -1, acknum = 0, checksum = 12851, ....................
+收到的packet: seqnum = 13, acknum = -1, checksum = 44963, nnnnnnnnnnnnnnnnnnnn
+receive called q size =2: 140
+接收方有序收到发送方的报文: seqnum = 13, acknum = -1, checksum = 44963, nnnnnnnnnnnnnnnnnnnn
+******模拟网络环境******：向上递交给应用层数据：nnnnnnnnnnnnnnnnnnnn
+******模拟网络环境******：向上递交给应用层数据：oooooooooooooooooooo
+接收方发送确认报文: seqnum = -1, acknum = 13, checksum = 12838, ....................
+收到的ack: seqnum = -1, acknum = 0, checksum = 12851, ....................
+sender::receive q: 13 15 0 
+ready: 14 
+发送方正确收到确认: seqnum = -1, acknum = 0, checksum = 12851, ....................
+收到的packet: seqnum = 15, acknum = -1, checksum = 39821, pppppppppppppppppppp
+receive called q size =1: 0
+接收方有序收到发送方的报文: seqnum = 15, acknum = -1, checksum = 39821, pppppppppppppppppppp
+******模拟网络环境******：向上递交给应用层数据：pppppppppppppppppppp
+******模拟网络环境******：向上递交给应用层数据：qqqqqqqqqqqqqqqqqqqq
+接收方发送确认报文: seqnum = -1, acknum = 15, checksum = 12836, ....................
+收到的ack: seqnum = -1, acknum = 13, checksum = 12838, ....................
+sender::receive q: 13 15 
+ready: 14 0 
+13 erased 14 erased 0 
+发送方正确收到确认: seqnum = -1, acknum = 13, checksum = 12838, ....................
+收到的packet: seqnum = 0, acknum = -1, checksum = 37266, qqqqqqqqqqqqqqqqqqqq
+receive called q size =0: 
+接收方收到在范围[base-N,base-1]内的报文: seqnum = -1, acknum = 15, checksum = 12836, ....................
+接收方发送确认报文: seqnum = -1, acknum = 0, checksum = 12851, ....................
+发送方定时器时间到，重发某一报文: seqnum = 15, acknum = -1, checksum = 39821, pppppppppppppppppppp
+收到的ack: seqnum = -1, acknum = 15, checksum = 12836, ....................
+sender::receive q: 15 
+ready: 0 
+15 erased 0 erased 
+发送方正确收到确认: seqnum = -1, acknum = 15, checksum = 12836, ....................
+收到的ack: seqnum = -1, acknum = 0, checksum = 12851, /...................
+sender::receive q: 
+ready: 
+发送方没有正确收到确认: seqnum = -1, acknum = 0, checksum = 12851, /...................
+收到的packet: seqnum = 15, acknum = -1, checksum = 39821, pppppppppppppppppppp
+receive called q size =0: 
+接收方收到在范围[base-N,base-1]内的报文: seqnum = -1, acknum = 0, checksum = 12851, ....................
+接收方发送确认报文: seqnum = -1, acknum = 15, checksum = 12836, ....................
+收到的ack: seqnum = -1, acknum = 15, checksum = 12836, ....................
+sender::receive q: 
+ready: 
+发送方收到的ack不在队列q中: seqnum = -1, acknum = 15, checksum = 12836, ....................
+发送方发送报文: seqnum = 1, acknum = -1, checksum = 34695, rrrrrrrrrrrrrrrrrrrr
+发送方发送报文: seqnum = 2, acknum = -1, checksum = 32124, ssssssssssssssssssss
+发送方发送报文: seqnum = 3, acknum = -1, checksum = 29553, tttttttttttttttttttt
+发送方发送报文: seqnum = 4, acknum = -1, checksum = 26982, uuuuuuuuuuuuuuuuuuuu
+收到的packet: seqnum = 1, acknum = -1, checksum = 34695, rrrrrrrrrrrrrrrrrrrr
+receive called q size =0: 
+接收方有序收到发送方的报文: seqnum = 1, acknum = -1, checksum = 34695, rrrrrrrrrrrrrrrrrrrr
+******模拟网络环境******：向上递交给应用层数据：rrrrrrrrrrrrrrrrrrrr
+接收方发送确认报文: seqnum = -1, acknum = 1, checksum = 12850, ....................
+收到的packet: seqnum = 2, acknum = -1, checksum = 32124, ssssssssssssssssssss
+receive called q size =0: 
+接收方有序收到发送方的报文: seqnum = 2, acknum = -1, checksum = 32124, ssssssssssssssssssss
+******模拟网络环境******：向上递交给应用层数据：ssssssssssssssssssss
+接收方发送确认报文: seqnum = -1, acknum = 2, checksum = 12849, ....................
+收到的ack: seqnum = -1, acknum = 1, checksum = 12850, ....................
+sender::receive q: 1 2 3 4 
+ready: 
+1 erased 
+发送方正确收到确认: seqnum = -1, acknum = 1, checksum = 12850, ....................
+收到的packet: seqnum = 3, acknum = -1, checksum = 29553, tttttttttttttttttttt
+receive called q size =0: 
+接收方有序收到发送方的报文: seqnum = 3, acknum = -1, checksum = 29553, tttttttttttttttttttt
+******模拟网络环境******：向上递交给应用层数据：tttttttttttttttttttt
+接收方发送确认报文: seqnum = -1, acknum = 3, checksum = 12848, ....................
+收到的packet: seqnum = 4, acknum = -1, checksum = 26982, uuuuuuuuuuuuuuuuuuuu
+receive called q size =0: 
+接收方有序收到发送方的报文: seqnum = 4, acknum = -1, checksum = 26982, uuuuuuuuuuuuuuuuuuuu
+******模拟网络环境******：向上递交给应用层数据：uuuuuuuuuuuuuuuuuuuu
+接收方发送确认报文: seqnum = -1, acknum = 4, checksum = 12847, ....................
+发送方定时器时间到，重发某一报文: seqnum = 2, acknum = -1, checksum = 32124, ssssssssssssssssssss
+发送方定时器时间到，重发某一报文: seqnum = 3, acknum = -1, checksum = 29553, tttttttttttttttttttt
+发送方定时器时间到，重发某一报文: seqnum = 4, acknum = -1, checksum = 26982, uuuuuuuuuuuuuuuuuuuu
+收到的packet: seqnum = 3, acknum = -1, checksum = 29553, tttttttttttttttttttt
+receive called q size =0: 
+接收方收到在范围[base-N,base-1]内的报文: seqnum = -1, acknum = 4, checksum = 12847, ....................
+接收方发送确认报文: seqnum = -1, acknum = 3, checksum = 12848, ....................
+收到的ack: seqnum = -1, acknum = 2, checksum = 12849, ....................
+sender::receive q: 2 3 4 
+ready: 
+2 erased 
+发送方正确收到确认: seqnum = -1, acknum = 2, checksum = 12849, ....................
+收到的packet: seqnum = -999999, acknum = -1, checksum = 26982, uuuuuuuuuuuuuuuuuuuu
+receive called q size =0: 
+接收方没有正确收到发送方的报文,数据校验错误: seqnum = -999999, acknum = -1, checksum = 26982, uuuuuuuuuuuuuuuuuuuu
+收到的ack: seqnum = -1, acknum = 3, checksum = 12848, ....................
+sender::receive q: 3 4 
+ready: 
+3 erased 
+发送方正确收到确认: seqnum = -1, acknum = 3, checksum = 12848, ....................
+发送方定时器时间到，重发某一报文: seqnum = 4, acknum = -1, checksum = 26982, uuuuuuuuuuuuuuuuuuuu
+收到的ack: seqnum = -1, acknum = 4, checksum = 12847, ....................
+sender::receive q: 4 
+ready: 
+4 erased 
+发送方正确收到确认: seqnum = -1, acknum = 4, checksum = 12847, ....................
+收到的ack: seqnum = -1, acknum = 3, checksum = 12848, ....................
+sender::receive q: 
+ready: 
+发送方收到的ack不在队列q中: seqnum = -1, acknum = 3, checksum = 12848, ....................
+收到的packet: seqnum = 4, acknum = -1, checksum = 26982, uuuuuuuuuuuuuuuuuuuu
+receive called q size =0: 
+接收方收到在范围[base-N,base-1]内的报文: seqnum = -1, acknum = 3, checksum = 12848, ....................
+接收方发送确认报文: seqnum = -1, acknum = 4, checksum = 12847, ....................
+收到的ack: seqnum = -1, acknum = 4, checksum = 12847, ....................
+sender::receive q: 
+ready: 
+发送方收到的ack不在队列q中: seqnum = -1, acknum = 4, checksum = 12847, ....................
+发送方发送报文: seqnum = 5, acknum = -1, checksum = 24411, vvvvvvvvvvvvvvvvvvvv
+发送方发送报文: seqnum = 6, acknum = -1, checksum = 21840, wwwwwwwwwwwwwwwwwwww
+发送方发送报文: seqnum = 7, acknum = -1, checksum = 19269, xxxxxxxxxxxxxxxxxxxx
+发送方发送报文: seqnum = 8, acknum = -1, checksum = 16698, yyyyyyyyyyyyyyyyyyyy
+收到的packet: seqnum = 5, acknum = -1, checksum = 24411, vvvvvvvvvvvvvvvvvvvv
+receive called q size =0: 
+接收方有序收到发送方的报文: seqnum = 5, acknum = -1, checksum = 24411, vvvvvvvvvvvvvvvvvvvv
+******模拟网络环境******：向上递交给应用层数据：vvvvvvvvvvvvvvvvvvvv
+接收方发送确认报文: seqnum = -1, acknum = 5, checksum = 12846, ....................
+收到的packet: seqnum = 6, acknum = -1, checksum = 21840, xwwwwwwwwwwwwwwwwwww
+receive called q size =0: 
+接收方没有正确收到发送方的报文,数据校验错误: seqnum = 6, acknum = -1, checksum = 21840, xwwwwwwwwwwwwwwwwwww
+收到的packet: seqnum = 7, acknum = -1, checksum = 19269, xxxxxxxxxxxxxxxxxxxx
+receive called q size =0: 
+接收方无序收到发送方的报文: seqnum = 7, acknum = -1, checksum = 19269, xxxxxxxxxxxxxxxxxxxx
+接收方发送确认报文: seqnum = -1, acknum = 7, checksum = 12844, ....................
+收到的ack: seqnum = -1, acknum = 5, checksum = 12846, ....................
+sender::receive q: 5 6 7 8 
+ready: 
+5 erased 
+发送方正确收到确认: seqnum = -1, acknum = 5, checksum = 12846, ....................
+收到的packet: seqnum = 8, acknum = -1, checksum = 16698, yyyyyyyyyyyyyyyyyyyy
+receive called q size =1: 7
+接收方无序收到发送方的报文: seqnum = 8, acknum = -1, checksum = 16698, yyyyyyyyyyyyyyyyyyyy
+接收方发送确认报文: seqnum = -1, acknum = 8, checksum = 12843, ....................
+收到的ack: seqnum = -999999, acknum = 7, checksum = 12844, ....................
+sender::receive q: 6 7 8 
+ready: 
+发送方没有正确收到确认: seqnum = -999999, acknum = 7, checksum = 12844, ....................
+发送方定时器时间到，重发某一报文: seqnum = 6, acknum = -1, checksum = 21840, wwwwwwwwwwwwwwwwwwww
+发送方定时器时间到，重发某一报文: seqnum = 7, acknum = -1, checksum = 19269, xxxxxxxxxxxxxxxxxxxx
+发送方定时器时间到，重发某一报文: seqnum = 8, acknum = -1, checksum = 16698, yyyyyyyyyyyyyyyyyyyy
+收到的ack: seqnum = -1, acknum = 8, checksum = 12843, ....................
+sender::receive q: 6 7 8 
+ready: 
+发送方正确收到确认: seqnum = -1, acknum = 8, checksum = 12843, ....................
+收到的packet: seqnum = -999999, acknum = -1, checksum = 21840, wwwwwwwwwwwwwwwwwwww
+receive called q size =2: 78
+接收方没有正确收到发送方的报文,数据校验错误: seqnum = -999999, acknum = -1, checksum = 21840, wwwwwwwwwwwwwwwwwwww
+收到的packet: seqnum = 8, acknum = -1, checksum = 16698, yyyyyyyyyyyyyyyyyyyy
+receive called q size =2: 78
+接收方无序收到已缓存的发送方报文: seqnum = 8, acknum = -1, checksum = 16698, yyyyyyyyyyyyyyyyyyyy
+接收方发送确认报文: seqnum = -1, acknum = 8, checksum = 12843, ....................
+发送方定时器时间到，重发某一报文: seqnum = 6, acknum = -1, checksum = 21840, wwwwwwwwwwwwwwwwwwww
+发送方定时器时间到，重发某一报文: seqnum = 7, acknum = -1, checksum = 19269, xxxxxxxxxxxxxxxxxxxx
+收到的ack: seqnum = -1, acknum = 8, checksum = 12843, ....................
+sender::receive q: 6 7 
+ready: 8 
+发送方收到的ack不在队列q中: seqnum = -1, acknum = 8, checksum = 12843, ....................
+收到的packet: seqnum = 6, acknum = -1, checksum = 21840, wwwwwwwwwwwwwwwwwwww
+receive called q size =2: 78
+接收方有序收到发送方的报文: seqnum = 6, acknum = -1, checksum = 21840, wwwwwwwwwwwwwwwwwwww
+******模拟网络环境******：向上递交给应用层数据：wwwwwwwwwwwwwwwwwwww
+******模拟网络环境******：向上递交给应用层数据：xxxxxxxxxxxxxxxxxxxx
+******模拟网络环境******：向上递交给应用层数据：yyyyyyyyyyyyyyyyyyyy
+接收方发送确认报文: seqnum = -1, acknum = 6, checksum = 12845, ....................
+收到的ack: seqnum = -1, acknum = 6, checksum = 12845, ....................
+sender::receive q: 6 7 
+ready: 8 
+6 erased 8 
+发送方正确收到确认: seqnum = -1, acknum = 6, checksum = 12845, ....................
+发送方定时器时间到，重发某一报文: seqnum = 7, acknum = -1, checksum = 19269, xxxxxxxxxxxxxxxxxxxx
+收到的packet: seqnum = 7, acknum = -1, checksum = 19269, yxxxxxxxxxxxxxxxxxxx
+receive called q size =0: 
+接收方没有正确收到发送方的报文,数据校验错误: seqnum = 7, acknum = -1, checksum = 19269, yxxxxxxxxxxxxxxxxxxx
+发送方定时器时间到，重发某一报文: seqnum = 7, acknum = -1, checksum = 19269, xxxxxxxxxxxxxxxxxxxx
+收到的packet: seqnum = 7, acknum = -1, checksum = 19269, xxxxxxxxxxxxxxxxxxxx
+receive called q size =0: 
+接收方收到在范围[base-N,base-1]内的报文: seqnum = -1, acknum = 6, checksum = 12845, ....................
+接收方发送确认报文: seqnum = -1, acknum = 7, checksum = 12844, ....................
+收到的ack: seqnum = -1, acknum = 7, checksum = 12844, /...................
+sender::receive q: 7 
+ready: 8 
+发送方没有正确收到确认: seqnum = -1, acknum = 7, checksum = 12844, /...................
+发送方定时器时间到，重发某一报文: seqnum = 7, acknum = -1, checksum = 19269, xxxxxxxxxxxxxxxxxxxx
+收到的packet: seqnum = 7, acknum = -1, checksum = 19269, xxxxxxxxxxxxxxxxxxxx
+receive called q size =0: 
+接收方收到在范围[base-N,base-1]内的报文: seqnum = -1, acknum = 7, checksum = 12844, ....................
+接收方发送确认报文: seqnum = -1, acknum = 7, checksum = 12844, ....................
+收到的ack: seqnum = -1, acknum = 7, checksum = 12844, ....................
+sender::receive q: 7 
+ready: 8 
+7 erased 8 erased 
+发送方正确收到确认: seqnum = -1, acknum = 7, checksum = 12844, ....................
+发送方发送报文: seqnum = 9, acknum = -1, checksum = 14127, zzzzzzzzzzzzzzzzzzzz
+收到的packet: seqnum = 9, acknum = -1, checksum = 14127, {zzzzzzzzzzzzzzzzzzz
+receive called q size =0: 
+接收方没有正确收到发送方的报文,数据校验错误: seqnum = 9, acknum = -1, checksum = 14127, {zzzzzzzzzzzzzzzzzzz
+发送方定时器时间到，重发某一报文: seqnum = 9, acknum = -1, checksum = 14127, zzzzzzzzzzzzzzzzzzzz
+收到的packet: seqnum = 9, acknum = -1, checksum = 14127, zzzzzzzzzzzzzzzzzzzz
+receive called q size =0: 
+接收方有序收到发送方的报文: seqnum = 9, acknum = -1, checksum = 14127, zzzzzzzzzzzzzzzzzzzz
+******模拟网络环境******：向上递交给应用层数据：zzzzzzzzzzzzzzzzzzzz
+接收方发送确认报文: seqnum = -1, acknum = 9, checksum = 12842, ....................
+收到的ack: seqnum = -1, acknum = 9, checksum = 12842, ....................
+sender::receive q: 9 
+ready: 
+9 erased 
+发送方正确收到确认: seqnum = -1, acknum = 9, checksum = 12842, ....................
+******模拟网络环境******：模拟网络环境已发送完应用层数据，关闭模拟网络环境
+已发送应用层Message个数: 26
+发送到网络层数据Packet个数: 61
+网络层丢失的数据Packet个数: 5
+网络层损坏的数据pakcet个数:13
+发送到网络层确认Packet个数:43
+网络层丢失的确认Packet个数: 4
+网络层损坏的确认Packet个数: 4
+

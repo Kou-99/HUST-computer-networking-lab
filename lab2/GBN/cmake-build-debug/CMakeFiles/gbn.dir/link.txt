@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/gbn.dir/src/GBNReceiver.cpp.o CMakeFiles/gbn.dir/src/GBNSender.cpp.o CMakeFiles/gbn.dir/src/main.cpp.o  -o ../test/gbn ../lib/libnetsim.a 
