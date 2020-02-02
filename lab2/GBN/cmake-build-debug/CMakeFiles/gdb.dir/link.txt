@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/gdb.dir/src/StopWaitRdtReceiver.cpp.o CMakeFiles/gdb.dir/src/StopWaitRdtSender.cpp.o CMakeFiles/gdb.dir/src/main.cpp.o  -o ../bin/gdb ../lib/libnetsim.a 
